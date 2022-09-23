@@ -58,6 +58,7 @@ prepare() {
     patch --forward --strip=1 --input="$srcdir/start-hidden-on-tray.patch"
 
     cd ..
+    rm app/node_modules/abstract-socket/build/node_gyp_bins/python3
     asar pack app app.asar
 }
 
